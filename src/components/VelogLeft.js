@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/* 벨로그 왼쪽 영역. 로고, 서치바, 메뉴가 있는 위치 */
 const VelogLeftBlock = styled.div`
     display: -ms-flexbox;
     display: flex;

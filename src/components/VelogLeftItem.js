@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MdSearch } from 'react-icons/md'
+import { MdSearch, MdAirplanemodeActive, MdInsertEmoticon, MdExposurePlus1 } from 'react-icons/md'
 
+/* 벨로그 왼쪽 영역의 아이템 컴포넌트 */
+
+// 로고
 const VelogLogo = styled.div`
     padding-top: 32px;
     padding-bottom: 32px;
@@ -19,11 +22,13 @@ const VelogLogo = styled.div`
     position: relative;
 `;
 
+// 서치바 영역
 const InputFormPositioner = styled.div`
     padding-left: 1.75rem;
     padding-right: 1.75rem;
 `;
 
+// 서치바 사각형
 const InputForm = styled.div`
     -webkit-transition: all .125s ease-in;
     -o-transition: .125s all ease-in;
@@ -40,7 +45,7 @@ const InputForm = styled.div`
     align-items: center;
     color: #343a40;
     cursor: pointer;
-    &:hover {
+    &:hover { /* 마우스 오버시 초록색으로 변환 효과 */
         color: #3cb55c;
         border: 1px solid #3cb55c;
         background: white;
@@ -48,6 +53,7 @@ const InputForm = styled.div`
     }
 `;
 
+// 서치바 입력값
 const InputValue = styled.input`
     background: none;
     border: none;
@@ -60,21 +66,49 @@ const InputValue = styled.input`
     margin-left: .5rem;
     color: inherit;
 `;
+const MenuPositioner = styled.div`
+    list-style: none;
+    padding-left: 0;
+`;
 
-const MenuItem = styled.div`
+const Menu = styled.div`
     display: block;
-    list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+`;
+
+const MainMenuItem = styled.div`
+    color: #495057;
+    cursor: pointer;
+    &:hover { /* 마우스 오버시 초록색으로 변환 효과 */
+        color: #3cb55c;
+        border-right: 2px solid #3cb55c;
+        background: #f1f3f5;
+    }
+
+    a {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        font-size: 1.125rem;
+        padding-left: 1.75rem;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .item {
+        padding-left: 10px;
+    }
+
 `;
 
 function VelogLeftItem() {
     return (
         <>
-        <VelogLogo> /*벨로그 로고*/
+        <VelogLogo>
             <div class=".logo">Velog</div>
         </VelogLogo>
         <InputFormPositioner>
@@ -83,6 +117,31 @@ function VelogLeftItem() {
                 <InputValue />
             </InputForm>
         </InputFormPositioner>
+
+        <MenuPositioner>
+            <Menu>
+                <MainMenuItem>
+                    <a>
+                        <MdAirplanemodeActive />
+                        <div class="item">트렌딩</div>
+                    </a>
+                </MainMenuItem>
+
+                <MainMenuItem>
+                    <a>
+                        <MdInsertEmoticon />
+                        <div class="item">최신 포스트</div>
+                    </a>
+                </MainMenuItem>
+
+                <MainMenuItem>
+                    <a>
+                        <MdExposurePlus1 />
+                        <div class="item">태그 목록</div>
+                    </a>
+                </MainMenuItem>
+            </Menu>
+        </MenuPositioner>
         </>
         
     );
