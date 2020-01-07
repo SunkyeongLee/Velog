@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import VelogLeft from './components/VelogLeft';
 import VelogLeftItem from './components/VelogLeftItem';
+import VelogMainHeader from './components/VelogMainHeader';
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -24,6 +25,9 @@ function App() {
     <VelogLeft>
       <VelogLeftItem />
     </VelogLeft>
+    <VelogMainHeader>
+      
+    </VelogMainHeader>
     </>
   );
 }

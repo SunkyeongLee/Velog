@@ -8,7 +8,7 @@ const VelogLeftBlock = styled.div`
     -ms-flex-direction: column;
     flex-direction: column;
     position: fixed;
-    width: 18rem;
+    width: 15rem;
     background: #fff;
     height: 100%;
     top: 0;
