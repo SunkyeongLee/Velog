@@ -3,8 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 import VelogLeft from './components/VelogLeft';
 import VelogLeftItem from './components/VelogLeftItem';
 import VelogMainHeader from './components/VelogMainHeader';
+import VelogTrendingTemplate from './components/VelogTrendingTemplate';
 
 const GlobalStyle = createGlobalStyle`
+
 body{
   background: #e9ecef;
   margin: 0;
@@ -25,9 +27,8 @@ function App() {
     <VelogLeft>
       <VelogLeftItem />
     </VelogLeft>
-    <VelogMainHeader>
-      
-    </VelogMainHeader>
+    <VelogMainHeader />
+    <VelogTrendingTemplate />
     </>
   );
 }

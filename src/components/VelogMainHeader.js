@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+//import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
 
 
 const MainHeaderBlock = styled.div`
@@ -22,8 +23,11 @@ const RightArea = styled.div`
 `;
 
 const UserMenuWrapper = styled.div`
+    opacity: 0;
+    display: flex;
     position: relative;
     z-index: 10;
+    cursor: pointer;
 `;
 
 const UserMenu = styled.div`
@@ -64,11 +68,15 @@ const UserMenuItem = styled.div`
     cursor: pointer;
     color: #495057;
     display: block;
+    &:hover {
+        color: #3cb55c;
+    }
 
     a {
         text-decoration: none;
         color: inherit;
     }
+
 `;
 
 const Separator = styled.div`
@@ -83,6 +91,17 @@ const Separator = styled.div`
 
 const UserButton = styled.div`
 
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        ${UserMenuWrapper} {
+            opacity: 1;
+    }
+
+`;
+
+const Thumbnail = styled.div`
+
     .thumbnail {
         display: block;
         width: 3rem;
@@ -95,11 +114,6 @@ const UserButton = styled.div`
         -webkit-transition: all .15s ease-in;
         -o-transition: all .15s ease-in;
         transition: all .15s ease-in;
-        cursor: pointer;
-        &:hover {
-            ${UserMenuWrapper} {
-                opacity: 1;
-            }
     }
 
 `;
@@ -109,9 +123,11 @@ function VelogMainHeader() {
         <MainHeaderBlock>
             <RightArea>
                 <UserButton>
-                    <div class="img">
+                    <Thumbnail>
+                    <div className="img">
                         <img src="https://upload.wikimedia.org/wikipedia/ko/b/ba/안녕_자두야_최자두.jpg" className="thumbnail" alt="thumbnail" />
                     </div>  
+                    </Thumbnail>
                 </UserButton>
                 <UserMenuWrapper>
                     <UserMenuPositioner>

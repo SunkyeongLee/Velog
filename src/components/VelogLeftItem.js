@@ -109,7 +109,7 @@ function VelogLeftItem() {
     return (
         <>
         <VelogLogo>
-            <div class=".logo">Velog</div>
+            <div className=".logo">Velog</div>
         </VelogLogo>
         <InputFormPositioner>
             <InputForm>
@@ -123,21 +123,21 @@ function VelogLeftItem() {
                 <MainMenuItem>
                     <a>
                         <MdAirplanemodeActive />
-                        <div class="item">트렌딩</div>
+                        <div className="item">트렌딩</div>
                     </a>
                 </MainMenuItem>
 
                 <MainMenuItem>
                     <a>
                         <MdInsertEmoticon />
-                        <div class="item">최신 포스트</div>
+                        <div className="item">최신 포스트</div>
                     </a>
                 </MainMenuItem>
 
                 <MainMenuItem>
                     <a>
                         <MdExposurePlus1 />
-                        <div class="item">태그 목록</div>
+                        <div className="item">태그 목록</div>
                     </a>
                 </MainMenuItem>
             </Menu>
