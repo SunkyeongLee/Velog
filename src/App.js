@@ -4,6 +4,7 @@ import VelogLeft from './components/VelogLeft';
 import VelogLeftItem from './components/VelogLeftItem';
 import VelogMainHeader from './components/VelogMainHeader';
 import VelogTrendingTemplate from './components/VelogTrendingTemplate';
+import VelogPostCard from './components/VelogPostCard';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -28,7 +29,14 @@ function App() {
       <VelogLeftItem />
     </VelogLeft>
     <VelogMainHeader />
-    <VelogTrendingTemplate />
+    <VelogTrendingTemplate>
+      <VelogPostCard />
+      <VelogPostCard />
+      <VelogPostCard />
+      <VelogPostCard />
+      <VelogPostCard />
+      <VelogPostCard />
+    </VelogTrendingTemplate>
     </>
   );
 }
