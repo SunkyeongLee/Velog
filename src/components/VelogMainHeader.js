@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
+//import { DropdownMenu, MenuItem } from 'react-bootstrap-dropdown-menu';
 
 
 const MainHeaderBlock = styled.div`
@@ -93,10 +93,7 @@ const UserButton = styled.div`
 
     position: relative;
     cursor: pointer;
-    &:hover {
-        ${UserMenuWrapper} {
-            opacity: 1;
-    }
+    ${props => props.open && css``}
 
 `;
 
@@ -119,16 +116,21 @@ const Thumbnail = styled.div`
 `;
 
 function VelogMainHeader() {
+    const [open, setOpen] = useState(false);
+    const onToggle = () => setOpen(!open);
+
     return (
+        <>
         <MainHeaderBlock>
             <RightArea>
-                <UserButton>
+                <UserButton onClick={onToggle} open={open}>
                     <Thumbnail>
                     <div className="img">
                         <img src="https://upload.wikimedia.org/wikipedia/ko/b/ba/안녕_자두야_최자두.jpg" className="thumbnail" alt="thumbnail" />
                     </div>  
                     </Thumbnail>
                 </UserButton>
+                {open && 
                 <UserMenuWrapper>
                     <UserMenuPositioner>
                         <Triangle />
@@ -143,8 +145,10 @@ function VelogMainHeader() {
                             </UserMenu>
                     </UserMenuPositioner>
                 </UserMenuWrapper>
+                }
             </RightArea>
         </MainHeaderBlock>
+    </>
     );
 }
 
