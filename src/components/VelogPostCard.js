@@ -193,14 +193,14 @@ function VelogPostCard() {
                                 <a className="username" href="/">jadu01</a>
                             </div>
                             <h3>
-                                <a className="head" href="/">내가 느낀 벨로그 어쩌구 저쩌구</a>
+                                <a className="head" href="/">벨로그 컴포넌트</a>
                             </h3>
                             <div className="subinfo">
                                 <span>2020년 1월 11일 . </span>
                                 <span>2개의 댓글</span>
                             </div>
                             <div class="description">
-                                벨로그 포스트 중 리액트 첫번째 내용임 어쩌구 저쩌구
+                                벨로그 포스트 중 리액트 내용임 어쩌구 저쩌구
                             </div>
                         </div>
                 </CardContent>

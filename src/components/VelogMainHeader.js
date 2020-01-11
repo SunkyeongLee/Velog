@@ -98,6 +98,7 @@ const UserButton = styled.div`
             opacity: 1;
     }
 
+
 `;
 
 const Thumbnail = styled.div`
